@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DevEstudio Web</title>
+  <link rel="icon" href="img/logos/icono_sin_fondo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/index.css">
+  
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="hamburger" role="button">&#9776;</div>
+      <a href="index.html"><img src="img/logos/logo_sin_fondo.png" alt="DevEstudio Web" class="logo"></a>
+      <ul class="nav-links">
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#team">Nuestro Equipo</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a href="conocenos.html">Conócenos</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="sidebar" aria-hidden="true">
+  <div class="close-btn">&times;</div>
+  <nav class="sidebar-links">
+    <a href="#hero">Inicio</a>
+    <a href="#services">Servicios</a>
+    <a href="#team">Nuestro Equipo</a>
+    <a href="#contact">Contacto</a>
+    <a href="conocenos.html">Conócenos</a>
+  </nav>
+</div>
+
+<section id="hero" class="hero">
+  <h2>Soluciones Web a la Medida</h2>
+  <p class="animated-text">
+    <span class="card-animation">
+      <div class="loader"><span>Impulsa</span>
+        <span class="words">
+          <span class="word">tu e-commerce</span>
+          <span class="word">tu presencia web</span>
+          <span class="word">tus conversiones</span>
+          <span class="word">tu crecimiento</span>
+        </span>
+      </div>
+    </span>
+  </p>
+</section>
+
+<main>
+  <section id="services">
+    <h2>Servicios</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Tiendas Online</h3>
+        <p>Desarrollo de e-commerce con pasarelas de pago integradas y gestión de inventario.</p>
+      </div>
+      <div class="card">
+        <h3>Sistemas Empresariales</h3>
+        <p>Soluciones para control de operaciones, reportes y administración interna.</p>
+      </div>
+      <div class="card">
+        <h3>APIs &amp; Integraciones</h3>
+        <p>Conectamos tu plataforma con servicios externos y automatizamos flujos de trabajo.</p>
+      </div>
+      <div class="card">
+        <h3>Contenido Publicitario</h3>
+        <ul>
+          <li>Comerciales en HD</li>
+          <li>Fotografías profesionales</li>
+          <li>Rediseño visual de servicios o menús</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2>Nuestro Equipo</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <img src="img/Contacto/a.jpg" alt="Andrés Popoca">
+        <div class="testimonial-content">
+          <h4>Andrés Popoca</h4>
+          <span>Departamento de Programación</span>
+          <p>Programador Full Stack</p>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="img/Contacto/r.jpg" alt="Rihan Durán">
+        <div class="testimonial-content">
+          <h4>Rihan Durán</h4>
+          <span>Departamento de Marketing</span>
+          <p>Marketing, Fotógrafo y Editor</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>¿Listo para Empezar?</h2>
+    <p>Contáctanos y hablemos de tu proyecto.</p>
+    <div class="container"><div class="loader"></div><div class="loader"></div><div class="loader"></div></div>
+    <button onclick="location.href='contacto.html'">Escríbenos</button>
+  </section>
+</main>
+
+<footer>© 2025 DevEstudio Web · Todos los derechos reservados</footer>
+
+<script>
+  const io=new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target)}})},{threshold:.15});
+  document.querySelectorAll('.card,.testimonial').forEach(el=>io.observe(el));
+  const sb=document.querySelector('.sidebar'),hb=document.querySelector('.hamburger'),cb=document.querySelector('.close-btn');
+  hb.onclick=()=>{sb.classList.add('active');sb.setAttribute('aria-hidden','false')};
+  cb.onclick=()=>{sb.classList.remove('active');sb.setAttribute('aria-hidden','true')};
+  document.onclick=e=>{if(!e.target.closest('.sidebar')&&!e.target.closest('.hamburger')&&sb.classList.contains('active')){sb.classList.remove('active');sb.setAttribute('aria-hidden','true')}}
+</script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto – DevEstudio Web</title>
+  <link rel="icon" href="img/logos/icono_sin_fondo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <style>
+    /* Fondo específico de contacto */
+    body {
+      background: url('img/Mascota/enhanced_Fondo_de_contacto.png') center/cover no-repeat;
+    }
+
+    /* Contenedor de contacto alineado a la izquierda */
+    .container-contacto {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    /* Caja del formulario */
+    .form-box {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      margin-left: 2rem;
+    }
+    .form-box h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #0d0d0d;
+    }
+    .form-box input,
+    .form-box select,
+    .form-box textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: var(--radius);
+      font-size: 1rem;
+    }
+    .form-box button {
+      background-color: var(--primary);
+      color: var(--light);
+      padding: 0.75rem;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+    }
+
+    /* Ajustes móviles */
+    @media screen and (max-width: 768px) {
+      .container-contacto {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+      }
+      .form-box {
+        margin: 0;
+        width: 90%;
+        max-width: none;
+        padding: 1.5rem;
+      }
+      body {
+        background-position: center top;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Navbar (idem index.html) -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-content">
+        <div class="hamburger" role="button" aria-label="Abrir menú">&#9776;</div>
+        <a href="index.html">
+          <img src="img/logos/logo_sin_fondo.png" alt="DevEstudio Web" class="logo">
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#hero">Inicio</a></li>
+          <li><a href="index.html#services">Servicios</a></li>
+          <li><a href="index.html#team">Nuestro Equipo</a></li>
+          <li><a href="index.html#contact">Contacto</a></li>
+          <li><a href="conocenos.html">Conócenos</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar móvil -->
+  <div class="sidebar" aria-hidden="true">
+    <div class="close-btn" role="button" aria-label="Cerrar menú">&times;</div>
+    <nav class="sidebar-links">
+      <a href="index.html#hero">Inicio</a>
+      <a href="index.html#services">Servicios</a>
+      <a href="index.html#team">Nuestro Equipo</a>
+      <a href="index.html#contact">Contacto</a>
+      <a href="conocenos.html">Conócenos</a>
+    </nav>
+  </div>
+
+  <!-- Sección Contacto -->
+  <main>
+    <section class="container-contacto">
+      <div class="form-box">
+        <h2>Contáctanos</h2>
+        <form action="mailto:tu@correo.com" method="post" enctype="text/plain">
+          <div>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="Nombre" required>
+          </div>
+          <div>
+            <label for="correo">Correo electrónico:</label><br>
+            <input type="email" id="correo" name="Correo" required>
+          </div>
+          <div>
+            <label for="tipo">Tipo de servicio:</label><br>
+            <select id="tipo" name="Tipo de servicio" required>
+              <option value="">-- Selecciona una opción --</option>
+              <option value="Restaurantes">Restaurantes</option>
+              <option value="Venta de artículos">Venta de artículos</option>
+              <option value="Veterinarios">Veterinarios</option>
+              <option value="Dentistas">Dentistas</option>
+              <option value="Médicos">Médicos</option>
+              <option value="Otros">Otros</option>
+            </select>
+          </div>
+          <div>
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="Mensaje" rows="6" required></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 DevEstudio Web · Todos los derechos reservados
+  </footer>
+
+  <!-- Scripts: IntersectionObserver + Sidebar toggle -->
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.card, .testimonial').forEach(el => io.observe(el));
+
+    const sb = document.querySelector('.sidebar'),
+          hb = document.querySelector('.hamburger'),
+          cb = document.querySelector('.close-btn');
+
+    hb.onclick = () => {
+      sb.classList.add('active');
+      sb.setAttribute('aria-hidden','false');
+    };
+    cb.onclick = () => {
+      sb.classList.remove('active');
+      sb.setAttribute('aria-hidden','true');
+    };
+    document.onclick = e => {
+      if (!e.target.closest('.sidebar')
+          && !e.target.closest('.hamburger')
+          && sb.classList.contains('active')) {
+        sb.classList.remove('active');
+        sb.setAttribute('aria-hidden','true');
+      }
+    };
+  </script>
+</body>
+</html>

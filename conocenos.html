@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conócenos – DevEstudio Web</title>
+  <link rel="icon" href="img/logos/icono_sin_fondo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <style>
+    /* Cards en sección ejemplos */
+    .examples-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .examples-cards .card h4 {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    /* Cabecera full-screen */
+    .conocenos-header {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .conocenos-header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* Contenido centrado */
+    .conocenos-content {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .conocenos-content hr {
+      border: none;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-content">
+        <div class="hamburger" role="button">&#9776;</div>
+        <a href="#conocenos-header">
+          <img src="img/logos/logo_sin_fondo.png" alt="DevEstudio Web" class="logo">
+        </a>
+        <ul class="nav-links">
+          <li><a href="#conocenos-header">Inicio</a></li>
+          <li><a href="#conocenos-content">¿Qué ofrecemos?</a></li>
+          <li><a href="#examples-cards">Ejemplos</a></li>
+          <li><a href="index.html">Volver a Inicio</a></li>
+          <li><a href="index.html#contact">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidebar móvil -->
+  <div class="sidebar" aria-hidden="true">
+    <div class="close-btn">&times;</div>
+    <nav class="sidebar-links">
+      <a href="#conocenos-header">Inicio</a>
+      <a href="#conocenos-content">¿Qué ofrecemos?</a>
+      <a href="#examples-cards">Ejemplos</a>
+      <a href="index.html">Inicio General</a>
+      <a href="index.html#contact">Contacto</a>
+    </nav>
+  </div>
+
+  <!-- Cabecera full-screen -->
+  <section id="conocenos-header" class="conocenos-header">
+    <img src="img/Mascota/enhanced_enhanced_P2.png" alt="DevEstudio Web">
+  </section>
+
+  <!-- Contenido principal -->
+  <section id="conocenos-content" class="conocenos-content">
+    <hr>
+    <h2>¿Qué ofrecemos en DevEstudio Web?</h2>
+    <p>
+      En <strong>DevEstudio Web</strong> nos especializamos en el desarrollo de soluciones digitales
+      personalizadas que impulsan la presencia online de negocios y emprendedores. Combinamos
+      tecnología, diseño funcional y creatividad para entregar productos únicos, funcionales y
+      listos para crecer con tu marca.
+    </p>
+    <hr>
+
+    <h3>Desarrollo Web a Medida</h3>
+    <p>
+      Creamos sitios web totalmente personalizados, adaptados a las necesidades de tu negocio. No
+      usamos plantillas genéricas: diseñamos pensando en ti, tus clientes y tus objetivos.
+    </p>
+    <ul>
+      <li>Páginas autoadministrables con panel de control.</li>
+      <li>Portales para venta de servicios o productos.</li>
+      <li>Sistemas de gestión interna para clínicas, tiendas o negocios de servicios.</li>
+      <li>Optimización para dispositivos móviles (responsive design).</li>
+      <li>Formularios de contacto, reserva o cotización.</li>
+      <li>Enlaces a WhatsApp, redes sociales y mapas.</li>
+    </ul>
+    <hr>
+
+    <h3>Paneles Administrativos Profesionales</h3>
+    <p>
+      Desarrollamos dashboards intuitivos y funcionales que permiten administrar tu negocio de forma eficiente:
+    </p>
+    <ul>
+      <li>Gestión de productos, pedidos, usuarios y servicios.</li>
+      <li>Estadísticas y gráficas interactivas (ventas, stock, rendimiento).</li>
+      <li>Roles de usuario con distintos permisos.</li>
+      <li>Seguridad básica con autenticación.</li>
+    </ul>
+    <hr>
+
+    <h3>Interfaces Visuales Adaptadas</h3>
+    <p>
+      Cada interfaz es clara, intuitiva y pensada para facilitar la experiencia del usuario. Adaptamos el diseño
+      a la identidad de tu marca y a las expectativas de tu público.
+    </p>
+    <ul>
+      <li>Navegación fluida.</li>
+      <li>Diseños modernos con iconografía personalizada.</li>
+      <li>Accesibilidad visual y estructural.</li>
+    </ul>
+    <hr>
+    <!-- CONTENIDO PUBLICITARIO PROFESIONAL -->
+    <h3>Contenido Publicitario Profesional (opcional)</h3>
+    <p>
+      ¿Quieres que tu página no solo funcione bien, sino que también impacte? Te apoyamos con la creación de contenido visual
+      de alta calidad para destacar tu marca.
+    </p>
+    <ul>
+      <li><strong>Comercial en HD</strong> (ideal para redes o portada web).</li>
+      <li><strong>Sesiones fotográficas</strong> profesionales de productos, instalaciones o equipo humano.</li>
+      <li><strong>Rediseño de materiales visuales</strong> como menús, flyers, banners digitales o catálogos.</li>
+    </ul>
+    <hr>
+
+    <!-- SOPORTE TÉCNICO Y MANTENIMIENTO -->
+    <h3>Soporte Técnico y Mantenimiento</h3>
+    <p>
+      Nos comprometemos con tu proyecto incluso después de la entrega. Contamos con soporte técnico post-desarrollo para resolver
+      cualquier necesidad, ajustes menores o mantenimiento evolutivo.
+    </p>
+    <ul>
+      <li>Corrección de errores técnicos.</li>
+      <li>Actualización de módulos.</li>
+      <li>Acompañamiento para escalar tu sistema con nuevas funciones.</li>
+    </ul>
+    <hr>
+
+    <!-- TECNOLOGÍA + DISEÑO + ESTRATEGIA -->
+    <h3>Tecnología + Diseño + Estrategia</h3>
+    <p>
+      Cada uno de nuestros proyectos combina tres pilares clave:
+    </p>
+    <ol>
+      <li><strong>Funcionalidad</strong>: Todo lo que necesitas, sin complicaciones.</li>
+      <li><strong>Identidad visual</strong>: Tu marca, con una presencia online única.</li>
+      <li><strong>Proyección digital</strong>: Pensamos en cómo tus usuarios interactúan contigo.</li>
+    </ol>
+    <hr>
+
+    <!-- ¿PARA QUIÉN ES DEVESTUDIO WEB? -->
+    <h3>¿Para quién es DevEstudio Web?</h3>
+    <ul>
+      <li>Clínicas dentales, veterinarias, de estética o salud.</li>
+      <li>Negocios de comida, cafeterías, panaderías o restaurantes.</li>
+      <li>Tiendas de productos físicos o digitales.</li>
+      <li>Profesionales independientes que necesitan una vitrina online.</li>
+      <li>Emprendimientos que buscan crecer en digital sin depender de redes sociales.</li>
+    </ul>
+    <hr>
+
+    <!-- NUESTRO DIFERENCIAL -->
+    <h3>Nuestro diferencial</h3>
+    <ul>
+      <li>Diseño 100% personalizado.</li>
+      <li>Tiempo de entrega optimizado.</li>
+      <li>Comunicación directa y acompañamiento humano.</li>
+      <li>Soluciones de alta calidad a precios accesibles.</li>
+    </ul>
+    <hr>
+  </section>
+
+  <!-- EJEMPLOS DE CÓMO PODRÍAMOS AYUDARTE -->
+  <section id="examples-cards" class="examples-cards">
+    <div class="card">
+      <h3>Restaurantes y Negocios de Alimentos</h3>
+      <h4>Desafíos comunes</h4>
+      <ul>
+        <li>Mostrar menú actualizado de forma visual.</li>
+        <li>Falta de canal digital para reservas o pedidos.</li>
+        <li>Alta competencia en redes sin control propio.</li>
+      </ul>
+      <h4>Lo que ofrecemos</h4>
+      <ul>
+        <li>Menú digital interactivo en sitio web.</li>
+        <li>Integración con WhatsApp para reservas y pedidos.</li>
+        <li>Responsive design para cualquier dispositivo.</li>
+        <li>Sistema autoadministrable para precios y promociones.</li>
+        <li>Rediseño de menús físicos y digitales.</li>
+        <li>Fotografías y videos profesionales de platillos.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Negocios de Venta de Artículos</h3>
+      <h4>Desafíos comunes</h4>
+      <ul>
+        <li>Vender productos en línea de forma segura.</li>
+        <li>Gestión manual de inventario y pedidos.</li>
+        <li>Falta de imagen profesional que genere confianza.</li>
+      </ul>
+      <h4>Lo que ofrecemos</h4>
+      <ul>
+        <li>Tienda online personalizada y funcional.</li>
+        <li>Panel de administración de inventario y promociones.</li>
+        <li>Imágenes profesionales y descripciones claras.</li>
+        <li>Integración de métodos de pago y seguimiento de pedidos.</li>
+        <li>Estadísticas de ventas y rendimiento.</li>
+        <li>Diseño centrado en la experiencia de usuario.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Clínicas Veterinarias</h3>
+      <h4>Desafíos comunes</h4>
+      <ul>
+        <li>Dificultad para agendar citas en línea.</li>
+        <li>Mostrar servicios y equipo profesional.</li>
+        <li>Baja visibilidad digital frente a competidores.</li>
+      </ul>
+      <h4>Lo que ofrecemos</h4>
+      <ul>
+        <li>Web con botones de contacto directo para citas.</li>
+        <li>Secciones informativas de servicios y especialidades.</li>
+        <li>Galería de instalaciones y casos de éxito.</li>
+        <li>Panel para campañas de vacunación y noticias.</li>
+        <li>Video institucional para generar confianza.</li>
+        <li>Diseño profesional y accesible.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Clínicas Dentales y Odontólogos</h3>
+      <h4>Desafíos comunes</h4>
+      <ul>
+        <li>Generar confianza y credibilidad desde el primer contacto.</li>
+        <li>Comunicación ineficiente de servicios y tratamientos.</li>
+        <li>Baja visibilidad en buscadores y redes.</li>
+      </ul>
+      <h4>Lo que ofrecemos</h4>
+      <ul>
+        <li>Web moderna con secciones de tratamientos y equipo.</li>
+        <li>Integración con WhatsApp y correo.</li>
+        <li>Testimonios, antes/después y certificaciones.</li>
+        <li>Galerías y video de presentación.</li>
+        <li>Estructura optimizada para SEO básico.</li>
+        <li>Diseño sobrio y profesional.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Médicos y Consultorios Especializados</h3>
+      <h4>Desafíos comunes</h4>
+      <ul>
+        <li>Falta de presencia digital profesional.</li>
+        <li>Comunicar servicios y credenciales claramente.</li>
+        <li>Complejidad en atención al paciente sin vía digital.</li>
+      </ul>
+      <h4>Lo que ofrecemos</h4>
+      <ul>
+        <li>Web personalizada para médicos y especialistas.</li>
+        <li>Secciones de áreas de atención y horarios.</li>
+        <li>Integración con mapas y contacto eficiente.</li>
+        <li>Formularios personalizados para consultas.</li>
+        <li>Galerías que refuercen profesionalismo.</li>
+        <li>Estructura lista para futuras ampliaciones.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Complementos disponibles</h3>
+      <h4>Para todos los sectores</h4>
+      <ul>
+        <li>Fotografía profesional de instalaciones y productos.</li>
+        <li>Video institucional HD.</li>
+        <li>Rediseño gráfico de menús, catálogos y banners.</li>
+        <li>Asesoría post-entrega: soporte y mantenimiento.</li>
+        <li>Diseño responsive para desktop, tablet y móvil.</li>
+        <li>Optimización SEO técnico básico.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 DevEstudio Web · Todos los derechos reservados
+  </footer>
+
+  <!-- Scripts: IntersectionObserver + Sidebar toggle -->
+  <script>
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.card, .testimonial').forEach(el => io.observe(el));
+
+    const sb = document.querySelector('.sidebar'),
+          hb = document.querySelector('.hamburger'),
+          cb = document.querySelector('.close-btn');
+    hb.onclick = () => sb.classList.add('active') && sb.setAttribute('aria-hidden','false');
+    cb.onclick = () => sb.classList.remove('active') && sb.setAttribute('aria-hidden','true');
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.sidebar') &&
+          !e.target.closest('.hamburger') &&
+          sb.classList.contains('active')) {
+        sb.classList.remove('active');
+        sb.setAttribute('aria-hidden','true');
+      }
+    });
+  </script>
+</body>
+</html>
